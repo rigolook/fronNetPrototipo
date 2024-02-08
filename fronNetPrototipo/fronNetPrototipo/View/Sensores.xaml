@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fronNetPrototipo.View.Sensores">
+    <StackLayout BackgroundColor="DimGray">
+        <Frame BorderColor="Aqua">
+            <Label Text="¡Agregado de sensores!" TextColor="Red" FontSize="35" FontAttributes="Bold" HorizontalOptions="Center"/>
+        </Frame>
+
+        <Frame Margin="0,30,0,0">
+            <Grid>
+                <Label Text="aqui imagen" Grid.Column="0" Grid.Row="0" />
+                <Label Text="seccion de cambio" Grid.Column="1" Grid.Row="0"/>
+            </Grid>
+        </Frame>
+    <Grid>
+        <Grid VerticalOptions="End" Grid.Row="0">
+            <Frame BorderColor="Black" Margin="-1,0,-1,0" Grid.Column="0" WidthRequest="100" HeightRequest="100" BackgroundColor="#1FD">
+                <Image Source="monitoreo.png"/>
+            </Frame>
+            <Frame Margin="-5,0,-1,0" BorderColor="Black" Grid.Column="1" WidthRequest="100" HeightRequest="100" BackgroundColor="Red">
+                <Image Source="registros.png"/>
+            </Frame>
+            <Frame Margin="-5,0,-0.1,0" BorderColor="Black" Grid.Column="2" WidthRequest="100" HeightRequest="100" BackgroundColor="#3eff1d">
+                <Image Source="ajustes.png"/>
+            </Frame>
+        </Grid>
+    </Grid>
+    </StackLayout>
+</ContentPage>

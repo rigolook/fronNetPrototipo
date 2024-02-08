@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Jr5T03020TMN6hnUXb2ch90CvRXKRYzx+qO84OIwieKAgH4cNVz2h8SLkv6pvicXYS1vEe3xEY8JyHC/X+HbtA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\CD16\\Desktop\\fronNetPrototipo\\fronNetPrototipo\\fronNetPrototipo.iOS\\fronNetPrototipo.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\CD16\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\CD16\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\CD16\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:vistamodelo="clr-namespace:fronNetPrototipo.VistaModelo" x:DataType="vistamodelo:VMprincipal"
+             x:Class="fronNetPrototipo.principal">
+    <Grid>
+    <ScrollView>
+    <StackLayout BackgroundColor="#1ff299">
+        <Label Text="Nivel de Temperatura:" HorizontalOptions="Center" FontSize="30" FontAttributes="Bold" TextColor="Black"/>
+        <Image Source="BarraTemperatura.png" HorizontalOptions="Center" />
+        <Label Text="30°c" HorizontalOptions="Center" TextColor="Black" FontSize="20"/>
+        <Label Text="Velocidad del ventilador:" HorizontalOptions="Center" FontSize="30" FontAttributes="Bold" TextColor="Black"/>
+        <Image Source="SegundaBarra.png" HorizontalOptions="Center" />
+        <Label Text="Medio" HorizontalOptions="Center" TextColor="Black" FontSize="20"/>
+        <Label Text="Calidad del aire:" HorizontalOptions="Center" FontSize="30" FontAttributes="Bold" TextColor="Black"/>
+        <Image Source="SegundaBarra.png" HorizontalOptions="Center" />
+        <Label Text="Prevenir!!" HorizontalOptions="Center" TextColor="Black" FontSize="20"/>
+        
+    </StackLayout>
+    </ScrollView>
+        <Grid VerticalOptions="End" Grid.Row="0">
+            <Frame BorderColor="Black" Margin="-1,0,-1,0" Grid.Column="0" WidthRequest="100" HeightRequest="100" BackgroundColor="#1FD">
+                <ImageButton Source="monitoreo.png"/>
+            </Frame>
+            <Frame Margin="-5,0,-1,0" BorderColor="Black" Grid.Column="1" WidthRequest="100" HeightRequest="100" BackgroundColor="Red">
+                <ImageButton Source="registros.png" Command="{Binding normalcommand}"/>
+            </Frame>
+            <Frame Margin="-5,0,-0.1,0" BorderColor="Black" Grid.Column="2" WidthRequest="100" HeightRequest="100" BackgroundColor="#3eff1d">
+                <ImageButton Source="ajustes.png"/>
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>

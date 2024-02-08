@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fronNetPrototipo.View.Configuracion"
+             xmlns:local1="clr-namespace:fronNetPrototipo">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local1:ColorConverter x:Key="ColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <ScrollView>
+            <StackLayout BackgroundColor="#1ff299">
+                <Frame BorderColor="Black">
+                    <Label Text="Configuracion" TextColor="Black" FontSize="Title" HorizontalOptions="Center"/>
+                </Frame>
+                <Grid>
+                    <Label Margin="5" Text="Ventilador automatico" FontSize="20" TextColor="Black" HorizontalOptions="StartAndExpand" Grid.Column="0"/>
+                    <Button TextColor="White" Text="OFF" Command="{Binding }" BackgroundColor="#FDB4FF" x:Name="ventiladorActivo" Grid.Column="1"/>
+                </Grid>
+                <Label Margin="0,70,0,0" Text="Intervalo de registro" HorizontalOptions="Center" FontSize="20" TextColor="Black"/>
+                <Grid Margin="0,0,0,0">
+                    <ImageButton BackgroundColor="Transparent" Grid.Column="0" Margin="3" Source="flechaArriba.png" WidthRequest="50" HeightRequest="65" Padding="5"/>
+                    <Label Grid.Column="1" Text="Horas" FontSize="30" FontAttributes="Bold" TextColor="BurlyWood" HorizontalOptions="Center"/>
+                    <ImageButton BackgroundColor="Transparent" Grid.Column="2" Margin="3" Source="flechaAbajo.png" WidthRequest="50" HeightRequest="65" Padding="7"/>
+                </Grid>
+                <Label Margin="20" HorizontalOptions="Center" Text="Temas:" TextColor="Black" FontSize="20"/>
+                <!--aqui lista de colores-->
+                <StackLayout Margin="10">
+                    <ListView x:Name="colorListView">
+                        <ListView.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Blanco</x:String>
+                                <!-- Descripción del color blanco -->
+                                <x:String>Rosa</x:String>
+                                <!-- Descripción del color rosa -->
+                                <x:String>Amarillo</x:String>
+                                <!-- Descripción del color Amarrillo -->
+                            </x:Array>
+                        </ListView.ItemsSource>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" Padding="10">
+                                        <BoxView Color="{Binding ., Converter={StaticResource ColorConverter}}"
+                                 HeightRequest="50" WidthRequest="50" Margin="5"/>
+                                        <Label Text="{Binding .}" VerticalOptions="Center"/>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+        <Grid VerticalOptions="End" Grid.Row="0">
+            <Frame BorderColor="Black" Margin="-1,0,-1,0" Grid.Column="0" WidthRequest="100" HeightRequest="100" BackgroundColor="#1FD">
+                <ImageButton Source="monitoreo.png"/>
+            </Frame>
+            <Frame Margin="-5,0,-1,0" BorderColor="Black" Grid.Column="1" WidthRequest="100" HeightRequest="100" BackgroundColor="Red">
+                <ImageButton Source="registros.png" Command="{Binding }"/>
+            </Frame>
+            <Frame Margin="-5,0,-0.1,0" BorderColor="Black" Grid.Column="2" WidthRequest="100" HeightRequest="100" BackgroundColor="#3eff1d">
+                <ImageButton Source="ajustes.png"/>
+            </Frame>
+        </Grid>
+    </Grid>
+
+</ContentPage>
